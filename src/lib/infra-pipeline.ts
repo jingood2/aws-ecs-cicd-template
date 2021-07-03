@@ -56,7 +56,7 @@ export class InfraPipelineStack extends cdk.Stack {
       synthAction: pipelines.SimpleSynthAction.standardYarnSynth({
         sourceArtifact: sourceArtifact,
         cloudAssemblyArtifact: cdkOutputArtifact,
-        subdirectory: 'infra',
+        //subdirectory: 'infra',
       }),
     });
 
