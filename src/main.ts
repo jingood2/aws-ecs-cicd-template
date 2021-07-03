@@ -1,4 +1,5 @@
 import { App, Construct, Stack, StackProps } from '@aws-cdk/core';
+import { InfraPipelineStack } from './lib/infra-pipeline';
 
 export class MyStack extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {
@@ -16,7 +17,6 @@ const devEnv = {
 
 const app = new App();
 
-new MyStack(app, 'my-stack-dev', { env: devEnv });
-// new MyStack(app, 'my-stack-prod', { env: prodEnv });
+new InfraPipelineStack(app, 'project-app-pipelines', { env: devEnv });
 
 app.synth();
