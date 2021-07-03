@@ -19,4 +19,4 @@ const app = new App();
 
 new InfraPipelineStack(app, 'project-app-pipelines', { env: devEnv });
 
-app.synth();
+//app.synth();

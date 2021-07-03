@@ -57,6 +57,8 @@ export class InfraPipelineStack extends cdk.Stack {
         sourceArtifact: sourceArtifact,
         cloudAssemblyArtifact: cdkOutputArtifact,
         //subdirectory: 'infra',
+        installCommand: 'yarn install --frozen-lockfile && yarn projen',
+        buildCommand: 'yarn build',
       }),
     });
 
@@ -130,7 +132,7 @@ export class InfraPipelineStack extends cdk.Stack {
             'echo Build completed on `date`',
             'echo Pushing the Docker image...',
             `docker push ${repositoryUri}:$CODEBUILD_RESOLVED_SOURCE_VERSION`,
-            'export iamgeTag=$CODEBUILD_RESOLVED_SOURCE_VERSION'
+            'export iamgeTag=$CODEBUILD_RESOLVED_SOURCE_VERSION',
           ],
         },
         env: {
