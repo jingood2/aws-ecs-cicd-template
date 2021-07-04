@@ -105,11 +105,6 @@ export class BuildStack extends cdk.Stack {
           ],
         },
       },
-      /*  env: {
-        'exported-variables': [
-          'imageTag',
-        ],
-      }, */
     });
   }
 }
