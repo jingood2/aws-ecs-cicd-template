@@ -65,7 +65,7 @@ export class InfraPipelineStack extends cdk.Stack {
       vpcId: envVars.DEV_STAGE_ENV.VPC_ID,
     });
 
-    pipeline.addApplicationStage(new BuildStage(this, 'DevStage', { vpc: vpc, stage: 'Develop' }));
+    pipeline.addApplicationStage(new BuildStage(this, 'DevStage', { vpc: vpc, stage: 'Develop', env: { account: '037729278610', region: 'ap-northeast-2' } }));
 
   }
 }
