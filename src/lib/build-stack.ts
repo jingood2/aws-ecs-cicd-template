@@ -104,11 +104,11 @@ export class BuildStack extends cdk.Stack {
             'export iamgeTag=$CODEBUILD_RESOLVED_SOURCE_VERSION',
           ],
         },
-        env: {
-          'exported-variables': [
-            'imageTag',
-          ],
-        },
+      },
+      env: {
+        'exported-variables': [
+          'imageTag',
+        ],
       },
     });
   }
