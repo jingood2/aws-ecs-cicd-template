@@ -17,7 +17,7 @@ export const envVars = {
     BUILD_BRANCH: process.env.BUILD_BRANCH || 'main',
   },
   DEV_STAGE_ENV: {
-    VPC_ID: '<<VPC_ID>>',
+    VPC_ID: 'vpc-0fb07ec52ebbabbee',
     PUB_SUBNET_ID: '<<PUBLIC_SUBNET_LIST>>',
     PRI_SUBNET_ID: '<<PRIVATE_SUBNET_LIST>>',
   },
