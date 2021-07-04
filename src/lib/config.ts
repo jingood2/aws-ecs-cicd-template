@@ -14,7 +14,7 @@ export const envVars = {
     NAME: process.env.APP_NAME || 'demo-app',
     REPO_NAME: process.env.REPO_NAME || 'project-demo-app',
     REPO_OWNER: process.env.REPO_OWNER || 'jingood2',
-    BUILD_BRANCH: process.env.BUILD_BRANCH || 'main',
+    BUILD_BRANCH: process.env.BUILD_BRANCH || 'master',
   },
   DEV_STAGE_ENV: {
     VPC_ID: 'vpc-0fb07ec52ebbabbee',
