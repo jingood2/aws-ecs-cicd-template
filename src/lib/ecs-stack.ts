@@ -18,7 +18,7 @@ export class EcsStack extends cdk.Stack {
       vpcId: props.vpcId,
     });
  */
-    const repository = ecr.Repository.fromRepositoryName(this, 'Repository', 'cdk-cicd/ecs-node-app');
+    const repository = ecr.Repository.fromRepositoryName(this, 'Repository', 'project/demo-app');
     const imageTag = props.imageTag || process.env.CODEBUILD_RESOLVED_SOURCE_VERSION ;
 
     const cluster = new ecs.Cluster(this, `Cluster_${props.stage}`, {
