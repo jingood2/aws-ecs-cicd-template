@@ -7,7 +7,7 @@ import * as pipelines from '@aws-cdk/pipelines';
 //import { BuildStage } from './build-stage';
 
 import { envVars } from './config';
-import { DevStage } from './dev-stage';
+//import { DevStage } from './dev-stage';
 
 export interface InfraPipelineStackProps extends cdk.StackProps {
 
@@ -62,7 +62,7 @@ export class InfraPipelineStack extends cdk.Stack {
       }),
     });
 
-    const vpc = ec2.Vpc.fromLookup(this, 'VPC', {
+    ec2.Vpc.fromLookup(this, 'VPC', {
       vpcId: envVars.DEV_STAGE_ENV.VPC_ID,
     });
 
