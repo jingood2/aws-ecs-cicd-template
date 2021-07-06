@@ -19,6 +19,8 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/aws-ecs-patterns',
     '@aws-cdk/aws-ec2',
     '@aws-cdk/aws-ecs',
+    '@aws-cdk/aws-ssm',
+    '@aws-cdk/aws-sns',
   ], /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */
   context: {
     '@aws-cdk/core:newStyleStackSynthesis': true,

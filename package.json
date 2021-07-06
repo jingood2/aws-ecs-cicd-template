@@ -56,6 +56,8 @@
     "@aws-cdk/aws-iam": "^1.110.0",
     "@aws-cdk/aws-lambda": "^1.110.0",
     "@aws-cdk/aws-s3": "^1.110.0",
+    "@aws-cdk/aws-sns": "^1.110.0",
+    "@aws-cdk/aws-ssm": "^1.110.0",
     "@aws-cdk/core": "^1.110.0",
     "@aws-cdk/pipelines": "^1.110.0",
     "chalk": "^4.1.1"

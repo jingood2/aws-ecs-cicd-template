@@ -4,9 +4,10 @@ import * as codepipeline_actions from '@aws-cdk/aws-codepipeline-actions';
 import * as ec2 from '@aws-cdk/aws-ec2';
 import * as cdk from '@aws-cdk/core';
 import * as pipelines from '@aws-cdk/pipelines';
-import { BuildStage } from './build-stage';
+//import { BuildStage } from './build-stage';
 
 import { envVars } from './config';
+import { DevStage } from './dev-stage';
 
 export interface InfraPipelineStackProps extends cdk.StackProps {
 
@@ -65,7 +66,12 @@ export class InfraPipelineStack extends cdk.Stack {
       vpcId: envVars.DEV_STAGE_ENV.VPC_ID,
     });
 
-    pipeline.addApplicationStage(new BuildStage(this, 'DevStage', { vpc: vpc, stage: 'Develop', env: { account: '037729278610', region: 'ap-northeast-2' } }));
+    //pipeline.addApplicationStage(new BuildStage(this, 'DevStage', { vpc: vpc, stage: 'Develop', env: { account: '037729278610', region: 'ap-northeast-2' } }));
+
+    pipeline.addApplicationStage(new DevStage(this, 'dev', {
+      env: { account: '037729278610', region: 'ap-northeast-2' },
+      vpc: vpc,
+    } ) );
 
   }
 }
