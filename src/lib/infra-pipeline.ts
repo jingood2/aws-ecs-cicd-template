@@ -68,10 +68,10 @@ export class InfraPipelineStack extends cdk.Stack {
 
     //pipeline.addApplicationStage(new BuildStage(this, 'DevStage', { vpc: vpc, stage: 'Develop', env: { account: '037729278610', region: 'ap-northeast-2' } }));
 
-    pipeline.addApplicationStage(new DevStage(this, 'dev', {
+    /* pipeline.addApplicationStage(new DevStage(this, 'dev', {
       env: { account: '037729278610', region: 'ap-northeast-2' },
       vpc: vpc,
-    } ) );
+    } ) ); */
 
   }
 }
