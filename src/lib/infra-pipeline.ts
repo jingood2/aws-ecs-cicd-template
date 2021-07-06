@@ -49,7 +49,8 @@ export class InfraPipelineStack extends cdk.Stack {
 
     }
 
-    const pipeline = new pipelines.CdkPipeline(this, 'CdkPipeline', {
+    //const pipeline = new pipelines.CdkPipeline(this, 'CdkPipeline', {
+    new pipelines.CdkPipeline(this, 'CdkPipeline', {
       pipelineName: 'cdk-cdkpipeline',
       cloudAssemblyArtifact: cdkOutputArtifact,
       sourceAction: sourceAction,
